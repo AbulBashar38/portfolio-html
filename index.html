@@ -142,6 +142,55 @@
         max-width: 720px;
       }
 
+      .contact-card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        padding: 28px 36px;
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+      }
+
+      .contact-card h2 {
+        margin: 0;
+        font-size: 1.6rem;
+      }
+
+      .contact-card p {
+        margin: 10px 0 0;
+        color: var(--muted);
+      }
+
+      .contact-actions {
+        margin-top: 18px;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
+      .contact-form {
+        margin-top: 18px;
+        display: grid;
+        gap: 10px;
+        max-width: 720px;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px 12px;
+        border: 1px solid var(--border);
+        border-radius: 8px;
+        font-size: 1rem;
+        background: transparent;
+        color: var(--text);
+      }
+
+      .contact-form textarea {
+        min-height: 100px;
+        resize: vertical;
+      }
+
       @media (max-width: 640px) {
         .hero-card {
           padding: 28px;
@@ -190,6 +239,41 @@
             useful websites. I like keeping layouts clear, content easy to read,
             and the overall design clean and professional.
           </p>
+        </section>
+
+        <section
+          class="contact-card"
+          id="contact"
+          aria-labelledby="contact-title"
+        >
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Get in touch</h2>
+          <p>
+            I'm available for projects and freelance work. The quickest way to
+            reach me is by email or using the simple form below.
+          </p>
+
+          <div class="contact-actions">
+            <a class="button primary" href="mailto:hello@yourdomain.com"
+              >Email Me</a
+            >
+            <a class="button secondary" href="#contact">Message Here</a>
+          </div>
+
+          <form
+            class="contact-form"
+            action="mailto:hello@yourdomain.com"
+            method="post"
+            enctype="text/plain"
+          >
+            <input type="text" name="name" placeholder="Your name" />
+            <input type="email" name="email" placeholder="Your email" />
+            <textarea name="message" placeholder="Your message"></textarea>
+            <div class="contact-actions">
+              <button class="button primary" type="submit">Send</button>
+              <button class="button secondary" type="reset">Reset</button>
+            </div>
+          </form>
         </section>
       </div>
     </main>
